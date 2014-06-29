@@ -1,0 +1,16 @@
+<H1>ちょびったー</h1> <p>ひとりおてがるちょびったー</p>
+
+<%= form_for @chobit do |f|  %>
+    <%= f.text_field :msg , :size => 60 %> <%= submit_tag "書込" %>
+
+<% end -%>
+
+<% @chobits.each do |chobit| -%>
+    <%= link_to chobit.favstar, fav_chobit_path(chobit) %>
+    <%= chobit.msg %> (<%= chobit.created_at %>)
+    <%= link_to "[削除]", chobit, :method => :delete %>
+    <br>
+<% end -%>
+
+<hr>
+(C) 革新的ネットサービスの構築 / <%= Time.now %>
