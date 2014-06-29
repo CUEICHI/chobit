@@ -2,6 +2,7 @@ class ChobitsController < ApplicationController
   def index
     @chobits = Chobit.all
     @chobit = Chobit.new
+     @you= YoutubeSearch::search('nice boat')
   end
 
   def create

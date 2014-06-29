@@ -5,6 +5,10 @@
 
 <% end -%>
 
+<%= @you
+    -%>
+<br>
+
 <% @chobits.each do |chobit| -%>
     <%= link_to chobit.favstar, fav_chobit_path(chobit) %>
     <%= chobit.msg %> (<%= chobit.created_at %>)
